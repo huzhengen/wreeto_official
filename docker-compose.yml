@@ -4,20 +4,10 @@ services:
     image: postgres:11
     env_file: .env
     volumes:
-    - ~/.volume-data/wreeto_official/postgres-data:/var/lib/postgresql/data
-  app:
-    image: chrisvel/wreeto:latest
-    command: foreman start 
-    volumes:
-      - .:/app/wreeto
-      - ./public/assets:/app/wreeto/public/assets
-      - ./storage:/app/storage
-      - ./backups:/app/backups
+    - ./data/postgres-data:/var/lib/postgresql/data
     ports:
-      - 8383:8383
-    depends_on:
-      - postgres
-      - redis
-    env_file: .env      
+    - "5432:5432"
   redis:
     image: redis:5.0.7
+    ports:
+      - "6379:6379"

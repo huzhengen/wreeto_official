@@ -41,3 +41,7 @@ public/assets
 public/assets/*
 
 .env
+
+/data
+package-lock.json
+yarn-error.log

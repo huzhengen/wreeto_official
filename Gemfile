@@ -1,4 +1,5 @@
-source 'https://rubygems.org'
+# source 'https://rubygems.org'
+source 'https://gems.ruby-china.com'
 
 gem 'rails', '~> 6.1', '>= 6.1.2.1'
 gem 'pg', '1.2.3'
